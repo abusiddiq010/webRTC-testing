@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #userSelect {
+            margin: 10px 0;
+        }
+
+        #messageInput {
+            margin: 10px 0;
+        }
+
+        #connectButton {
+            margin: 10px 0;
+        }
+
+        #messageBox {
+            margin: 10px 0;
+            padding: 10px;
+            border: 3px solid #ccc;
+            border-radius: 5px;
+            background-color: black;
+            color: whitesmoke;
+            height: 200px;
+            overflow-y: auto;
+        }
+
+        #local-video {
+            width: 50%;
+            height: 50%;
+            margin: 10px;
+        }
+
+        #remote-video {
+            width: 50%;
+            height: 50%;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WebSocket Client</h1>
+    <p>
+        Current User ID: <strong id="userId"></strong>
+    </p>
+    <div>
+        <label for="userSelect">Select User:</label>
+        <select id="userSelect"></select>
+    </div>
+    <div>
+        <label for="messageInput">Message:</label>
+        <input type="text" id="messageInput">
+    </div>
+    <div>
+        <button id="connectButton">Send Message</button>
+    </div>
+
+<div style="display: flex;">
+    <video class="video-player" id="local-video" autoplay playsinline controls></video>
+    <video class="video-player" id="remote-video" autoplay playsinline controls></video>
+</div>
+
+
+<button id="callButton">
+    CALL
+</button>
+    <div id="messageBox">
+    </div>
+
+
+
+    <script src="client.js"></script>
+</body>
+
+</html>
